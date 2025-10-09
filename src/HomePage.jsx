@@ -389,7 +389,7 @@ onMouseLeave={(e) => {
 </section>
 
 
-<div style={{ height: "30rem" }}></div>
+<div style={{ height: "50rem" }}></div>
 <AthleteB/>
 <div style={{ height: "8rem" }}></div>
 
