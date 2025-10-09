@@ -360,7 +360,7 @@ export default function Athlete() {
       // Add certificate QR to the PDF if available (black belt only)
       try {
         if (certificateQrUrl) {
-          const qrSize = 48; // tiny QR size in jsPDF points
+          const qrSize = 32; // very small QR size in jsPDF points
           const qrX = pageWidth - qrSize - 60; // right margin
           const qrY = pageHeight - qrSize - 80; // bottom margin
 
@@ -368,9 +368,9 @@ export default function Athlete() {
           doc.addImage(certificateQrUrl, 'PNG', qrX, qrY, qrSize, qrSize);
 
           // Optional caption below the QR
-          doc.setFontSize(8);
+          doc.setFontSize(7);
           doc.setFont('times', 'normal');
-          doc.text('Scan to verify certificate', qrX + qrSize / 2, qrY + qrSize + 14, { align: 'center' });
+          doc.text('Scan to verify certificate', qrX + qrSize / 2, qrY + qrSize + 10, { align: 'center' });
         }
       } catch (qrErr) {
         console.warn('Failed to add certificate QR to PDF:', qrErr);
@@ -1076,7 +1076,7 @@ export default function Athlete() {
                     <img
                       src={certificateQrUrl}
                       alt="Certificate QR Code"
-                      style={{ width: '48px', height: '48px', border: '1px solid #eee', borderRadius: '4px' }}
+                      style={{ width: '32px', height: '32px', border: '1px solid #eee', borderRadius: '4px' }}
                     />
                   ) : (
                     <p style={{ fontSize: '12px', color: '#666' }}>QR appears when data is complete.</p>
