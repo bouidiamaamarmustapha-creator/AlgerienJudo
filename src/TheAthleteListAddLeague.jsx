@@ -1732,13 +1732,14 @@ useEffect(() => {
             </select>
           </label>
 
-          <label>
-            Grade *
-            <select value={grade} onChange={(e) => setGrade(e.target.value)} required>
-              <option value="">-- Select --</option>
-              {grades.map((g, i) => <option key={i} value={g}>{g}</option>)}
-            </select>
-          </label>
+        <label>
+                  Grade *
+                  <select value={grade} onChange={(e) => setGrade(e.target.value)} required>
+                    <option value="">-- Select --</option>
+                    <option>Brown Belt</option>
+                    <option>Black Belt</option>
+                  </select>
+                </label>
 
           <label>
             Genres *
@@ -2041,3 +2042,4 @@ useEffect(() => {
     </div>
   );
 }
+
