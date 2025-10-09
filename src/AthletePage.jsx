@@ -1736,16 +1736,15 @@ const filteredAthletes = athletes.filter((a) => {
               </label>
 
               <label>
-                Grade *
-                <select value={grade} onChange={(e) => setGrade(e.target.value)} required>
-                  <option value="">-- Select --</option>
-                  {grades.map((g, i) => (
-                    <option key={i} value={g}>
-                      {g}
-                    </option>
-                  ))}
-                </select>
-              </label>
+                  Grade *
+                  <select value={grade} onChange={(e) => setGrade(e.target.value)} required>
+                    <option value="">-- Select --</option>
+                    <option>yellow belt</option>
+                    <option>orange belt</option>
+                    <option>green belt</option>
+                    <option>blue belt</option>
+                  </select>
+                </label>
 
               <label>
                 Genres *
